@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ElasticSearch\CopyDataWithDatabaseMySqlController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/copy-data-with-database-to-elasticsearch', [CopyDataWithDatabaseMySqlController::class, 'index'])->name('copy.data.with.database.to.elasticsearch');
+
+
